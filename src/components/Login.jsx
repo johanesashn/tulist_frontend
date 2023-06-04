@@ -29,6 +29,10 @@ function Login() {
         getUsers()
     }, [success])
 
+    useEffect(() => {
+        getUsers()
+    }, [])
+
     const checkUser = (e) => {
         e.preventDefault()
         users.map(user => {

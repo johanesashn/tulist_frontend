@@ -598,3 +598,15 @@ span.space {
 .edit-container .starred {
     background-color: #f5d563;
 }
+
+@media (max-width: 600px){
+    .list-container {
+        grid-template-areas:
+            "header" 
+            "starred"
+            "search"
+            "list"
+            "done"
+        ;
+    }
+}
