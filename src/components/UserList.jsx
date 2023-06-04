@@ -41,8 +41,8 @@ const UserList = () => {
     const getUsers = async() => {
         const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
         setUsers(response.data)
+        console.log("getting data is triggered")
     }
-
     
     const getUser = (id) => {
         users.map(user => {
