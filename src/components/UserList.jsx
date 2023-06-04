@@ -29,20 +29,20 @@ const UserList = () => {
     const [tempListId, setTempListId] = useState("")
     const [editedTitle, setEditedTitle] = useState("")
     const [editedDescription, setEditedDescription] = useState("")
-    const [emptyStarred, setEmptyStarred] = useState(true)
-    const [emptyDone, setEmptyDone] = useState(true)
     const [emptyList, setEmptyList] = useState(true)
     const [done, setDone] = useState(false)
     const [starred, setStarred] = useState(false)
     const [doneList, setDoneList] = useState([])
     const [starredList, setStarredList] = useState([])
     const [confetti, setConfetti] = useState(false)
+    const [load, setLoad] = useState(false)
 
     const getUsers = async() => {
         const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
         setUsers(response.data)
         console.log("getting data is triggered")
         console.log(response.data)
+        setLoad(true)
     }
     
     const getUser = (id) => {
@@ -59,14 +59,6 @@ const UserList = () => {
 
         setStarredList(starred);
         setDoneList(done)
-        
-        if (starredList.length !== 0){
-            setEmptyStarred(false)
-        }
-
-        if (doneList.length !== 0){
-            setEmptyDone(false)
-        }
 
         if(lists.length === 0){
             setEmptyList(true)
