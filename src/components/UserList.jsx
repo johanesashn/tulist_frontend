@@ -35,12 +35,12 @@ const UserList = () => {
     const [doneList, setDoneList] = useState([])
     const [starredList, setStarredList] = useState([])
     const [confetti, setConfetti] = useState(false)
-    const [track, setTrack] = useState("")
 
     const getUsers = async() => {
-        setTimeout(() => {
-            setTrack("done")
-        }, 0);
+        const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
+        setUsers(response.data)
+        console.log("getting data is triggered")
+        console.log(response.data)
     }
     
     const getUser = (id) => {
@@ -195,13 +195,8 @@ const UserList = () => {
         setDay(getDay())
         setMonth(getMonth())
         setDate(getDate())
-        if (track === "done"){
-            async () => {
-                const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
-                setUsers(response.data)
-                console.log("getting data is triggered")
-                console.log(response.data)
-            }
+        if(users.list[0]){
+            editList(users.lists[0].id)
         }
     }, [])
 
