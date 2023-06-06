@@ -132,14 +132,19 @@ const UserList = () => {
 
         setTimeout(() => {
             setConfetti(false)
-        }, 7000);
+        }, 5000);
         
         const newList = [...lists]
 
         newList.forEach((list, i) => {
             if (list._id === tempListId) {
                 if (done) {
-                    editedList = {title: editedTitle, description: editedDescription, isDone: true, isStarred: false}
+                    if (userFile === ""){
+                        editedList = {title: editedTitle, description: editedDescription, isDone: false, isStarred: false}
+                        alert("File must be filled")
+                    } else {
+                        editedList = {title: editedTitle, description: editedDescription, isDone: true, isStarred: false}
+                    }
                 } else if (starred) {
                     editedList = {title: editedTitle, description: editedDescription, isDone: list.isDone, isStarred: true}
                 } else {
@@ -151,14 +156,6 @@ const UserList = () => {
 
         setDone(false)
         setStarred(false)
-        if (done === true){
-            if (userFile === ""){
-                alert("File must be filled")
-                return 
-            } else {
-                setConfetti(true)
-            }
-        }
 
         try {
             await axios.patch(`https://mighty-gold-production.up.railway.app/users/${id}`, {

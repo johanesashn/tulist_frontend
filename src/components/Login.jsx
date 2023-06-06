@@ -29,6 +29,10 @@ function Login() {
         getUsers()
     }, [register])
 
+    useEffect(() => {
+        getUsers()
+    }, [users])
+
     const checkUser = (e) => {
         e.preventDefault()
         users.map(user => {
@@ -111,8 +115,7 @@ function Login() {
                 <path fill="#A97EF3" d="M38,-48.3C51.3,-42.6,65.8,-34.3,72.8,-21.5C79.9,-8.8,79.6,8.5,74.3,23.9C69,39.3,58.6,52.8,45.3,58.5C32.1,64.2,16,62,1.4,60.1C-13.3,58.2,-26.5,56.5,-41.7,51.4C-56.9,46.4,-74,38,-77.2,25.7C-80.4,13.3,-69.7,-2.9,-60.4,-15.9C-51,-28.9,-43.1,-38.7,-33.3,-45.6C-23.5,-52.5,-11.7,-56.6,0.3,-57C12.3,-57.4,24.6,-54.1,38,-48.3Z" transform="translate(100 100)" />
             </svg>
             </div>
-            </div>
-            {/* <Navbar /> */}
+        </div>
             {
                 register ? 
                 <div className="login-content">
