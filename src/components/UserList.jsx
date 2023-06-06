@@ -223,6 +223,12 @@ const UserList = () => {
         setDoneList(doneList)
     }, [doneList, starredList])
 
+    // for hosting
+    useEffect(() => {
+        console.log(starredList);
+        console.log(doneList)
+    }, [doneList, starredList])
+
     useEffect(() => {
         getUser(id)
     }, [users])   
