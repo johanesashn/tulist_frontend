@@ -199,7 +199,6 @@ const UserList = () => {
         setDay(getDay())
         setMonth(getMonth())
         setDate(getDate())
-        console.log("triggered")
     }, [])
 
     useEffect(() => {

@@ -654,4 +654,8 @@ span.space {
     .edit-fill {
         width: 80%;
     }
+
+    .done.side, .starred.side {
+        margin: 0;
+    }
 }
