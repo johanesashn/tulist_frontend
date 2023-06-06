@@ -48,14 +48,14 @@ const UserList = () => {
                 setUser(user)
                 setLists([...user.lists])
                 userLists = [...user.lists]
+
+                const done = user.lists.filter((list) => list.isDone === true)
+                const starred = user.lists.filter((list) => list.isStarred === true)    
+                console.log("new")
+                setStarredList(starred);
+                setDoneList(done)
             }
         })
-
-        const done = lists.filter((list) => list.isDone === true)
-        const starred = lists.filter((list) => list.isStarred === true)    
-
-        setStarredList(starred);
-        setDoneList(done)
     }
 
     const deleteUser = async (id, idList) => {
