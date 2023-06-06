@@ -29,7 +29,6 @@ const UserList = () => {
     const [tempListId, setTempListId] = useState("")
     const [editedTitle, setEditedTitle] = useState("")
     const [editedDescription, setEditedDescription] = useState("")
-    // const [emptyList, setEmptyList] = useState(true)
     const [done, setDone] = useState(false)
     const [starred, setStarred] = useState(false)
     const [doneList, setDoneList] = useState([])
@@ -212,8 +211,8 @@ const UserList = () => {
 
     useEffect(() => {
         console.log(starredList)
-        console.log(done)
-    }, [done, starredList])
+        console.log(doneList)
+    }, [doneList, starredList])
 
     return (
         <div className="list-container">
