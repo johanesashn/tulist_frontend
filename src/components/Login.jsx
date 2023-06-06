@@ -27,11 +27,7 @@ function Login() {
 
     useEffect(() => {
         getUsers()
-    }, [success])
-
-    useEffect(() => {
-        getUsers()
-    }, [])
+    }, [register])
 
     const checkUser = (e) => {
         e.preventDefault()

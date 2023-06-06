@@ -111,6 +111,7 @@ const UserList = () => {
     }
 
     const searchItem = (value) => {
+        console.log(value)
         let count = 0
         lists.forEach((list) => {
             if (!list.isDone){
@@ -216,7 +217,6 @@ const UserList = () => {
 
     return (
         <div className="list-container">
-            {console.log(userFile)}
             {confetti? <Confetti /> : <div></div>}
             <header>
                 <Header 
@@ -234,7 +234,7 @@ const UserList = () => {
                     value={searchList}
                     onChange={(e) => {
                         setSearchList(e.target.value)
-                        searchItem(searchList)
+                        searchItem(e.target.value)
                     }}
                 />
                 {showList.title !== undefined ? 
