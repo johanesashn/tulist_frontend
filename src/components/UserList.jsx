@@ -111,7 +111,6 @@ const UserList = () => {
     }
 
     const searchItem = (value) => {
-        console.log(value)
         let count = 0
         lists.forEach((list) => {
             if (!list.isDone){

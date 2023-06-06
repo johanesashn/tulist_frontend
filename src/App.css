@@ -614,4 +614,44 @@ span.space {
             "done"
         ;
     }
+
+    .login-content {
+        width: 80vw;
+    }
+
+    .vector1 {
+        position: absolute;
+        left: -11.32%;
+        right: 54.03%;
+        top: 10.36%;
+        bottom: -19.53%;
+    }
+    
+    .vector2 {
+        position: absolute;
+        left: 50.4%;
+        right: 20.92%;
+        top: 10.36%;
+        bottom: 60.64%;
+    }
+    
+    .vector3 {
+        position: absolute;
+        left: 57.5%;
+        right: -14.51%;
+        top: 28.42%;
+        bottom: 45.21%;
+    }
+    
+    .vector4 {
+        position: absolute;
+        left: 45.97%;
+        right: -3.61%;
+        top: 60%;
+        bottom: -9.57%;
+    }
+
+    .edit-fill {
+        width: 80%;
+    }
 }
