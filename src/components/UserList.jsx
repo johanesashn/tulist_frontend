@@ -29,7 +29,7 @@ const UserList = () => {
     const [tempListId, setTempListId] = useState("")
     const [editedTitle, setEditedTitle] = useState("")
     const [editedDescription, setEditedDescription] = useState("")
-    const [emptyList, setEmptyList] = useState(true)
+    // const [emptyList, setEmptyList] = useState(true)
     const [done, setDone] = useState(false)
     const [starred, setStarred] = useState(false)
     const [doneList, setDoneList] = useState([])
@@ -57,9 +57,9 @@ const UserList = () => {
         setStarredList(starred);
         setDoneList(done)
 
-        if(lists.length === 0){
-            setEmptyList(true)
-        } else setEmptyList(false)
+        // if(lists.length === 0){
+        //     setEmptyList(true)
+        // } else setEmptyList(false)
     }
 
     const deleteUser = async (id, idList) => {
@@ -212,7 +212,7 @@ const UserList = () => {
 
     console.log(user)
     console.log(lists)
-    console.log(emptyList)
+    // console.log(emptyList)
 
     return (
         <div className="list-container">
@@ -362,10 +362,7 @@ const UserList = () => {
                             <div></div>
                         }
                         <div className="cards">
-                        {emptyList ? 
-                            <div></div>
-                            :
-                            lists.map((list, index) => {
+                            {lists.map((list, index) => {
                                 index %= 6
                                 index += 1
                                 let style
