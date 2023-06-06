@@ -246,6 +246,11 @@ header {
     /* box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px; */
 }
 
+.user-file {
+    margin-top: .5rem;
+    
+}
+
 .side-empty{
     /* border: 1px solid black; */
     padding: 0;

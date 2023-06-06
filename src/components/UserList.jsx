@@ -35,6 +35,7 @@ const UserList = () => {
     const [doneList, setDoneList] = useState([])
     const [starredList, setStarredList] = useState([])
     const [confetti, setConfetti] = useState(false)
+    const [userFile, setUserFile] = useState("")
 
     const getUsers = async() => {
         const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
@@ -150,6 +151,14 @@ const UserList = () => {
 
         setDone(false)
         setStarred(false)
+        if (done === true){
+            if (userFile === ""){
+                alert("File must be filled")
+                return 
+            } else {
+                setConfetti(true)
+            }
+        }
 
         try {
             await axios.patch(`https://mighty-gold-production.up.railway.app/users/${id}`, {
@@ -194,7 +203,6 @@ const UserList = () => {
         setMonth(getMonth())
         setDate(getDate())
         console.log("triggered")
-        console.log(users)
     }, [])
 
     useEffect(() => {
@@ -208,6 +216,7 @@ const UserList = () => {
 
     return (
         <div className="list-container">
+            {console.log(userFile)}
             {confetti? <Confetti /> : <div></div>}
             <header>
                 <Header 
@@ -295,12 +304,17 @@ const UserList = () => {
                                             setEditedDescription(e.target.value)
                                         }} 
                                     ></textarea>
+                                    <input 
+                                        type="file" 
+                                        className='user-file' 
+                                        value={userFile}
+                                        onChange={(e) => setUserFile(e.target.value)}
+                                    />
                                     <button className='submit' type='submit'>update</button>
                                     <button 
                                         className='submit done' 
                                         type='submit'
                                         onClick={() => {
-                                            setConfetti(true)
                                             setDone(true)
                                         }}
                                     >

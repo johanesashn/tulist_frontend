@@ -8,9 +8,6 @@ export default function Header(props) {
                     <h1 className='sub-title'>in Your Day!!!</h1>
                 </div>
             </div>
-            {/* <div className="day-info">
-                <h3>{props.day}, {props.date} {props.month}</h3>
-            </div> */}
         </>
     )
 }
