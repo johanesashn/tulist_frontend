@@ -605,7 +605,9 @@ span.space {
 }
 
 .preview-image {
+    margin-top: 1rem;
     width: 100%;
+    max-height: 40vh;
 }
 
 @media (max-width: 600px){

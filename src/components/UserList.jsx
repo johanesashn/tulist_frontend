@@ -196,11 +196,11 @@ const UserList = () => {
         const reader = new FileReader()
 
         reader.onloadend = () => {
-         setPreviewImage(reader.result)
+            setPreviewImage(reader.result)
         }
 
         if (file) {
-        reader.readAsDataURL(file)
+            reader.readAsDataURL(file)
         }
     }
     
@@ -315,13 +315,13 @@ const UserList = () => {
                                             setEditedDescription(e.target.value)
                                         }} 
                                     ></textarea>
+                                    {setPreviewImage && <img className='preview-image' src={previewImage} alt="" />}
                                     <input 
                                         type="file" 
                                         className='user-file' 
                                         value={userFile}
                                         onChange={(e) => handleUserFile(e)}
                                     />
-                                    {setPreviewImage && <img className='preview-image' src={previewImage} alt="" />}
                                     <button className='submit' type='submit'>update</button>
                                     <button 
                                         className='submit done' 
