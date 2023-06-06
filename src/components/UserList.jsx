@@ -207,6 +207,8 @@ const UserList = () => {
     
     useEffect(() => {
         getUsers()
+        setStarredList(starredList);
+        setDoneList(doneList)
         setGreet(greeting())
         setDay(getDay())
         setMonth(getMonth())
@@ -223,15 +225,14 @@ const UserList = () => {
         setDoneList(doneList)
     }, [doneList, starredList])
 
-    // for hosting
-    useEffect(() => {
-        console.log(starredList);
-        console.log(doneList)
-    }, [doneList, starredList])
-
     useEffect(() => {
         getUser(id)
     }, [users])   
+
+    useEffect(() => {
+        console.log(starredList)
+        console.log(doneList)
+    }, [doneList, starredList])
 
     return (
         <div className="list-container">
