@@ -213,6 +213,8 @@ const UserList = () => {
         setDay(getDay())
         setMonth(getMonth())
         setDate(getDate())
+        setStarredList(starredList);
+        setDoneList(doneList)
     }, [])
 
     useEffect(() => {
@@ -223,16 +225,11 @@ const UserList = () => {
     useEffect(() => {
         setStarredList(starredList);
         setDoneList(doneList)
-    }, [doneList, starredList])
+    }, [doneList, starredList, users])
 
     useEffect(() => {
         getUser(id)
     }, [users])   
-
-    useEffect(() => {
-        console.log(starredList)
-        console.log(doneList)
-    }, [doneList, starredList])
 
     return (
         <div className="list-container">
