@@ -55,10 +55,6 @@ const UserList = () => {
 
         setStarredList(starred);
         setDoneList(done)
-
-        // if(lists.length === 0){
-        //     setEmptyList(true)
-        // } else setEmptyList(false)
     }
 
     const deleteUser = async (id, idList) => {
@@ -193,7 +189,6 @@ const UserList = () => {
     }
     
     useEffect(() => {
-        getUsers()
         setGreet(greeting())
         setDay(getDay())
         setMonth(getMonth())
@@ -201,18 +196,17 @@ const UserList = () => {
     }, [])
 
     useEffect(() => {
+        getUsers()
+    }, [doneList, starredList])
+
+    useEffect(() => {
         const done = lists.filter((list) => list.isDone === true)
         setDoneList(done)
-    }, [confetti])
+    }, [confetti, doneList])
 
     useEffect(() => {
         getUser(id)
     }, [users])   
-
-    useEffect(() => {
-        console.log(starredList)
-        console.log(doneList)
-    }, [doneList, starredList])
 
     return (
         <div className="list-container">
