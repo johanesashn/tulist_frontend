@@ -211,6 +211,7 @@ const UserList = () => {
     }, [users])   
 
     console.log(user)
+    console.log(lists)
 
     return (
         <div className="list-container">
