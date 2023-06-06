@@ -51,7 +51,7 @@ const UserList = () => {
 
                 const done = user.lists.filter((list) => list.isDone === true)
                 const starred = user.lists.filter((list) => list.isStarred === true)    
-                console.log("new")
+                
                 setStarredList(starred);
                 setDoneList(done)
             }
