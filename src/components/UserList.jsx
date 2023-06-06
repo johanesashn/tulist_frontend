@@ -210,9 +210,8 @@ const UserList = () => {
         getUser(id)
     }, [users])   
 
-    console.log(user)
-    console.log(lists)
-    // console.log(emptyList)
+    console.log(starredList)
+    console.log(doneList)
 
     return (
         <div className="list-container">
