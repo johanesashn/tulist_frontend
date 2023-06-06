@@ -35,6 +35,7 @@ const UserList = () => {
     const [starredList, setStarredList] = useState([])
     const [confetti, setConfetti] = useState(false)
     const [userFile, setUserFile] = useState("")
+    const [previewImage, setPreviewImage] = useState(null)
 
     const getUsers = async() => {
         const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
@@ -188,6 +189,20 @@ const UserList = () => {
             console.log(error);
         }
     }
+
+    const handleUserFile = (e) => {
+        setUserFile(e.target.value)
+        const file = e.target.files[0]
+        const reader = new FileReader()
+
+        reader.onloadend = () => {
+         setPreviewImage(reader.result)
+        }
+
+        if (file) {
+        reader.readAsDataURL(file)
+        }
+    }
     
     useEffect(() => {
         getUsers()
@@ -304,8 +319,9 @@ const UserList = () => {
                                         type="file" 
                                         className='user-file' 
                                         value={userFile}
-                                        onChange={(e) => setUserFile(e.target.value)}
+                                        onChange={(e) => handleUserFile(e)}
                                     />
+                                    {setPreviewImage && <img className='preview-image' src={previewImage} alt="" />}
                                     <button className='submit' type='submit'>update</button>
                                     <button 
                                         className='submit done' 

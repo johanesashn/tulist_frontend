@@ -604,6 +604,10 @@ span.space {
     background-color: #f5d563;
 }
 
+.preview-image {
+    width: 100%;
+}
+
 @media (max-width: 600px){
     .list-container {
         grid-template-areas:
