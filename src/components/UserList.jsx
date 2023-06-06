@@ -123,6 +123,7 @@ const UserList = () => {
     }
 
     const submitEdit = async () => {
+        setPreviewImage(null)
         setEdit(false)
         let editedList = {}
 
@@ -327,6 +328,7 @@ const UserList = () => {
                                         className='submit done' 
                                         type='submit'
                                         onClick={() => {
+                                            setConfetti(true)
                                             setDone(true)
                                         }}
                                     >
