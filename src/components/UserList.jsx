@@ -210,8 +210,10 @@ const UserList = () => {
         getUser(id)
     }, [users])   
 
-    console.log(starredList)
-    console.log(doneList)
+    useEffect(() => {
+        console.log(starredList)
+        console.log(done)
+    }, [done, starredList])
 
     return (
         <div className="list-container">
