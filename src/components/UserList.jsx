@@ -210,6 +210,8 @@ const UserList = () => {
         getUser(id)
     }, [users])   
 
+    console.log(user)
+
     return (
         <div className="list-container">
             {confetti? <Confetti /> : <div></div>}
