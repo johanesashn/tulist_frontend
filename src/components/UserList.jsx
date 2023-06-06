@@ -135,10 +135,11 @@ const UserList = () => {
             if (list._id === tempListId) {
                 if (done) {
                     if (userFile === ""){
-                        editedList = {title: editedTitle, description: editedDescription, isDone: false, isStarred: false}
+                        editedList = {title: editedTitle, description: editedDescription, isDone: false, isStarred: list.isStarred}
                         alert("File must be filled")
                     } else {
                         editedList = {title: editedTitle, description: editedDescription, isDone: true, isStarred: false}
+                        setUserFile("")
                     }
                 } else if (starred) {
                     editedList = {title: editedTitle, description: editedDescription, isDone: list.isDone, isStarred: true}
@@ -209,11 +210,6 @@ const UserList = () => {
     useEffect(() => {
         getUser(id)
     }, [users])   
-
-    useEffect(() => {
-        console.log(starredList)
-        console.log(doneList)
-    }, [doneList, starredList])
 
     return (
         <div className="list-container">
