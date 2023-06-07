@@ -1,0 +1,67 @@
+ @media (max-width: 1000px){
+    .achievements .fill{
+        width: 90%;
+    }
+
+    .achievements .fill .header {
+        margin: auto;
+    }
+
+    .achievements .container .cards {
+        margin-left: 0;
+    }
+
+    .achievements .cards .card {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 4vmin;
+        font-size: 2.8vmin;
+        height: fit-content;
+    }
+
+    .achievements .scroll {
+        bottom: 10em;
+    }
+      
+    .achievements .fill .cards {
+    margin-bottom: -2vmin;
+    margin-left: 1em;
+    }
+ }
+ 
+ @media (max-width : 700px){
+    .achievements {
+        background-image: url("../img/smallJumbo.png");
+        padding-bottom: 14vmin;
+    }
+
+    .achievements .fill {
+        width: 85%;
+    }
+        
+    .achievements .fill .cards {
+        margin-bottom: -3vmin;
+    }
+    
+    .achievements .cards .card {
+        width: 95%;
+        margin-bottom: 5vmin;
+        height: max-content;
+    }
+
+    .achievements .scroll {
+        bottom: 4em;
+    }
+
+    .achievements .cards .card h2 {
+        font-size: 4.5vmin;
+    }
+
+    .achievements .cards .card h4 {
+        font-size: 3vmin;
+    }
+
+    .achievements .cards .card p {
+        font-size: 2.7vmin;
+    }
+}

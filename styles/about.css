@@ -1,0 +1,6 @@
+@media(max-width: 700px){
+    .about {
+        background-image: url("../img/smallAbout.png");
+        background-attachment: inherit;
+    }
+}

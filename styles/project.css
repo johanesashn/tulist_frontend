@@ -1,0 +1,28 @@
+@media (max-width: 900px) {
+  .projects .container a {
+    width: 33.3%;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    height: fit-content;
+  }
+  
+  .projects .container a {
+    width: 50%;
+  }
+
+  .projects .coverImg .see {
+    font-size: 2.8vmin;
+    letter-spacing: .2em;
+  }
+
+  .display .more a:nth-child(1) {
+    margin-top: -2em;
+  }
+
+  .view-website {
+    padding: .8 em;
+  }
+}

@@ -1,0 +1,1157 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* HTML tag */
+span {
+  font-family: "Caveat", cursive;
+  font-size: 4vmin;
+  color: #505050;
+}
+
+.cover {
+  background-color: #1d1d1d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  /* bottom: 0; */
+  height: 100vh;
+  transform: translateY(-100%);
+  animation: 1.3s cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cover p {
+  letter-spacing: 0.1em;
+  font-size: 5vmin;
+  font-family: "Caveat", cursive;
+}
+
+.cover img {
+  margin-bottom: 1em;
+  animation: 0.8s spin;
+  width: 12vw;
+}
+
+/* jumbotron */
+.jumbotron {
+  padding: 0 calc(3vmin + 4em);
+  padding-top: 15vmin;
+  position: relative;
+  height: calc(100vh - 15vmin);
+  overflow-x: hidden;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("img/jumbotron.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jumbotron .scroll {
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 5em;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron .scroll p {
+  margin-right: 1.5em;
+  animation: 1.5s ease-in scroll infinite;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5vmin;
+  color: #f41f68;
+  font-weight: bolder;
+}
+
+.jumbotron .desc {
+  font-family: "Poor Story", cursive;
+  letter-spacing: 0.1em;
+  margin-top: 0.8em;
+  font-size: 3vmin;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumbotron h3 {
+  margin-left: 1em;
+}
+
+.jumbotron .scroll svg {
+  color: #f41f68;
+}
+
+.jumbotron .scroll:first-child {
+  left: -1.5em;
+}
+
+.jumbotron .scroll:last-child {
+  right: -1.5em;
+}
+
+.jumbotron button {
+  background-color: transparent;
+  border: none;
+  font-size: 19vmin;
+  font-weight: bolder;
+  transition: all 0.3s;
+  margin-left: -0.05em;
+  margin-bottom: -1em;
+  cursor: text;
+}
+
+.jumbotron button.pink {
+  color: #f41f68;
+}
+
+.upside,
+.midside,
+.downside {
+  margin-left: 3vmin;
+  width: 85vw;
+}
+
+.downside {
+  margin-bottom: 2vmin;
+}
+
+.jumbotron button.J {
+  text-shadow: -0.08em 0em #f41f68;
+  transform: rotate(10deg);
+  animation: 1.5s ease-in-out text infinite;
+}
+
+.jumbotron button:hover {
+  animation: 0.8s bounceText;
+  color: #f41f68;
+}
+
+.jumbotron button.space {
+  width: 0.3em;
+}
+
+.jumbotron button.contact {
+  margin-right: 4em;
+  margin-top: 1em;
+  font-size: 3vmin;
+  border: 1.5px solid #f41f68;
+  position: relative;
+  padding: 0.7em 1.5em;
+  position: relative;
+  color: #f41f68;
+  letter-spacing: 0.1em;
+  height: 3em;
+  cursor: pointer;
+}
+
+.jumbotron button.contact span {
+  height: 0.3em;
+  width: 0.3em;
+  background-color: #f41f68;
+  display: inline-block;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  z-index: 1;
+  transition: background-color 0.3s 0.3s;
+}
+
+.jumbotron button.contact p {
+  position: relative;
+}
+
+.jumbotron button.contact::before {
+  content: "";
+  position: absolute;
+  top: -0.5%;
+  right: 0;
+  width: 100%;
+  height: 101%;
+  background-color: #f41f68;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+}
+
+.jumbotron button.contact:hover {
+  color: #0d0d0d;
+  animation: none;
+}
+
+.jumbotron button.contact:hover span {
+  background-color: #0d0d0d;
+}
+
+.jumbotron button:hover::before {
+  transform: scaleX(1);
+}
+
+.about {
+  color: white;
+  background-color: #1d1d1d;
+  background-image: url("img/about.png");
+  background-position: center;
+  width: calc(100vw + 1em);
+  margin-left: -1em;
+  background-attachment: fixed;
+}
+
+.about span {
+  font-size: 3.5vmin;
+}
+
+.about .container div {
+  margin-left: 1em;
+}
+
+.about button {
+  background-color: transparent;
+  border: none;
+  font-size: 10vmin;
+  font-weight: bolder;
+  transition: all 0.3s;
+  margin-bottom: -1em;
+  cursor: text;
+  color: #c9165a;
+}
+
+.about .white button {
+  color: white;
+}
+
+.about button:hover {
+  animation: 0.8s bounceText;
+  color: #c9165a;
+}
+
+.about a {
+  color: #c9165a;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.about .container {
+  padding: 100px 0;
+  width: 85%;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about p {
+  font-size: 2.5vmin;
+  letter-spacing: 0.1em;
+  line-height: 4vmin;
+}
+
+.about p.start {
+  text-decoration: underline;
+  margin-top: 1em;
+  font-size: 3vmin;
+  letter-spacing: 0.1em;
+  font-family: "Lato", sans-serif;
+  color: white;
+  margin-left: 1em;
+}
+
+.about .container img {
+  transition: all 0.3s;
+}
+
+.about .container a:hover img {
+  transform: rotate(-47deg) translateY(1vmin);
+}
+
+.about .container img {
+  width: 3.8vmin;
+  margin-left: 0.2em;
+  transform: translateY(0.3em) rotate(90deg);
+}
+
+.projects {
+  background-color: #1d1d1d;
+  color: white;
+  margin-top: -0.2em;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.display #more1,
+#more2,
+#more3,
+#more4,
+#more5,
+#more6, 
+#more7,
+#more8, 
+#more9 {
+  display: none;
+}
+
+.display a {
+  color: white;
+}
+
+.display .more {
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.display .fill {
+  margin-top: 5vmin;
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.display .more a:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.display .more a:nth-child(1) img {
+  width: 3vmin;
+  margin-right: 0.3em;
+}
+
+.display .more .fill img.arrow {
+  width: 10vmin;
+  animation: 0.6s 0.3s rise ease-in-out forwards;
+  transform: scale(0);
+}
+
+.display #more1:target,
+#more2:target,
+#more3:target,
+#more4:target,
+#more5:target,
+#more6:target,
+#more7:target,
+#more8:target,
+#more9:target,
+#more10:target {
+  display: block;
+  top: 0;
+  background-color: rgb(0, 0, 0, 0.9);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display .more .fill img {
+  width: 60%;
+  z-index: 11;
+  animation: 0.6s rise ease-in-out;
+  border-radius: 10px;
+}
+
+.projects .upper {
+  padding-left: 1em;
+}
+
+.projects p {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1em;
+  width: 85%;
+  margin: auto;
+  text-align: right;
+  margin-bottom: 1em;
+  font-size: 2.8vmin;
+  /* text-decoration: underline; */
+  text-underline-offset: 0.2em;
+  margin-right: 0.8em;
+}
+
+.projects p span {
+  text-decoration: none;
+}
+
+.projects .container {
+  display: flex;
+  width: 100%;
+  background-color: #1d1d1d;
+  height: max-content;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects .container a {
+  position: relative;
+  aspect-ratio: 1;
+  display: block;
+  width: 20%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.projects .container a img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.projects .coverImg {
+  transition: all 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+  display: flex;
+  font-size: 1.8vmin;
+  z-index: 1;
+}
+
+.projects .coverImg .see {
+  margin: auto;
+  border-radius: 50%;
+  padding: 0.5em;
+  box-sizing: border-box;
+  background-color: #f41f68;
+  text-transform: capitalize;
+  width: 40%;
+  height: 40%;
+  transform: scale(0) rotate(-180deg);
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: 600;
+  font-family: "Caveat", cursive;
+  z-index: 2;
+  letter-spacing: 0.1em;
+  flex-wrap: wrap;
+  font-size: 2.2vmin;
+  text-align: center;
+}
+
+.projects a:hover .coverImg {
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+.projects a:hover .see {
+  transform: scale(1) rotate(0);
+}
+
+.projects a:hover img {
+  transform: scale(1.3);
+}
+
+.view-website {
+  position: absolute;
+  bottom: 0;
+  background-color: #f41f68;
+  letter-spacing: .05em;
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .9em;
+}
+
+.achievements {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10vmin 0;
+  background-image: url("img/jumbotron.png");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.achievements .scroll {
+  position: absolute;
+  transform: rotate(90deg);
+  bottom: 15em;
+  display: flex;
+  align-items: center;
+}
+
+.achievements .scroll p {
+  margin-right: 1.5em;
+  animation: 1.5s ease-in scroll infinite;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5vmin;
+  color: #f41f68;
+  font-weight: bolder;
+}
+
+.achievements .scroll svg {
+  color: #f41f68;
+}
+
+.achievements .scroll:first-child {
+  left: -1.5em;
+}
+
+.achievements .scroll:last-child {
+  right: -1.5em;
+}
+
+.achievements .fill {
+  margin: auto;
+  width: 85%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.achievements h4 {
+  color: #c9165a;
+  font-size: 2.2vmin;
+  letter-spacing: 0;
+}
+
+.achievements span {
+  color: #505050;
+  font-size: 3.5vmin;
+}
+
+.achievements .header .upside button {
+  color: #c9165a;
+}
+
+.achievements .header .main {
+  display: flex;
+  justify-content: flex;
+  flex-wrap: wrap;
+}
+
+.achievements .header .main > * {
+  width: fit-content;
+}
+
+.achievements button {
+  background-color: transparent;
+  border: none;
+  font-size: 10vmin;
+  font-weight: bolder;
+  transition: all 0.3s;
+  margin-bottom: -1em;
+  cursor: text;
+  color: #1d1d1d;
+}
+
+.achievements .white button {
+  color: white;
+}
+
+.achievements button:hover {
+  animation: 0.8s bounceText;
+}
+
+.achievements .container .cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0.8em 0;
+  margin-left: 1em;
+}
+
+.achievements .container .card {
+  width: 32%;
+  padding: 2em 1.5em;
+  box-sizing: border-box;
+  border-top: 2px solid hsl(337, 80%, 44%);
+  box-shadow: 1px 0 9px #8e8d8d;
+  letter-spacing: 0.05em;
+  background-color: white;
+}
+
+.achievements .container .card:last-child {
+  border-top: 2px solid #ec9a01;
+}
+
+.achievements .container .card:last-child h4 {
+  color: #ec9a01;
+}
+
+.achievements .cards .card:hover {
+  animation: 0.3s borderRed forwards;
+}
+
+.achievements .cards .card:last-child:hover {
+  animation: 0.3s borderOrange forwards;
+}
+
+.achievements .container .card h2 {
+  font-family: "Lato", sans-serif;
+  margin: 0.8em 0;
+  font-size: 3.43vmin;
+}
+
+.achievements .container .card p {
+  font-size: 2vmin;
+  color: #7c7c7c;
+}
+
+.walkingText {
+  background-color: white;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
+}
+
+.walkingText h2 {
+  white-space: nowrap;
+  padding: 0 0.1em;
+  font-size: 11.5vmin;
+  letter-spacing: 0.05em;
+  font-weight: bolder;
+  font-family: "Lato", sans-serif;
+  word-spacing: 0.08em;
+  animation: move-rtl 11000ms linear infinite;
+  transition: all 0.3s;
+}
+
+.walkingText:hover h2 {
+  color: #c9165a;
+}
+
+.skills {
+  background-image: url("img/jumbotron.png");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 4em 0;
+  height: fit-content;
+  overflow-x: hidden;
+  padding-top: 3em;
+  margin-top: 1rem;
+}
+
+.skills .fill {
+  margin: auto;
+  width: 85%;
+}
+
+.skills .header .upside button {
+  color: #c9165a;
+}
+
+.skills button {
+  background-color: transparent;
+  border: none;
+  font-size: 10vmin;
+  font-weight: bolder;
+  transition: all 0.3s;
+  margin-bottom: -1em;
+  cursor: text;
+  color: #1d1d1d;
+}
+
+.skills button:hover {
+  animation: 0.8s bounceText;
+}
+
+.skills h2.small {
+  display: none;
+}
+
+.skills .cards {
+  display: flex;
+  width: 90%;
+  margin: 1em auto;
+}
+
+.skills .card {
+  display: flex;
+  margin: 0 .3em;
+  width: max-content;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.skills .fill .cards .card {
+  border: 2px solid #c7014d;
+}
+
+.skills .fill .cards .card:nth-child(6), 
+.skills .fill .cards .card:nth-child(7) {
+  border: 2px solid #ec9a01;
+}
+
+.skills .fill .cards .card:nth-child(8),
+.skills .fill .cards .card:nth-child(9),
+.skills .fill .cards .card:nth-child(10) {
+  border: 2px solid #125B50;
+}
+
+.skills .cards .card .header{
+  padding: 1em;
+  border-right: 2px solid #c7014d;
+  transition: all .3s;
+  color: #c7014d;
+  font-family: "Roboto", sans-serif;
+}
+
+.skills .fill .cards .card:nth-child(6) .header,
+.skills .fill .cards .card:nth-child(7) .header {
+  border-right: 2px solid #ec9a01;
+  color: #ec9a01;
+}
+
+.skills .fill .cards .card:nth-child(8) .header,
+.skills .fill .cards .card:nth-child(9) .header,
+.skills .fill .cards .card:nth-child(10) .header {
+  border-right: 2px solid #125B50;
+  color: #125B50;
+}
+
+.skills .fill .cards .card.active .header {
+  color: white;
+  background-color: #c7014d;
+}
+
+.skills .fill .cards .card:nth-child(6).active .header, 
+.skills .fill .cards .card:nth-child(7).active .header {
+  background-color: #ec9a01;
+  color: white;
+}
+
+.skills .fill .cards .card:nth-child(8).active .header,
+.skills .fill .cards .card:nth-child(9).active .header,
+.skills .fill .cards .card:nth-child(10).active .header {
+  background-color: #125B50;
+  color: white;
+}
+
+.skills .fill .cards .card:hover .header {
+  color: white;
+  background-color: #c7014d;
+}
+
+.skills .fill .cards .card:nth-child(6):hover .header, 
+.skills .fill .cards .card:nth-child(7):hover .header {
+  background-color: #ec9a01;
+  color: white;
+}
+
+.skills .fill .cards .card:nth-child(8):hover .header,
+.skills .fill .cards .card:nth-child(9):hover .header,
+.skills .fill .cards .card:nth-child(10):hover .header {
+  background-color: #125B50;
+  color: white;
+}
+
+
+.skills .cards .card .header h2 {
+  transform: rotate(-90deg);
+  margin-top: -.4em;
+}
+
+.skills .cards .card.active .fill{
+  width: 100%;
+  font-size: 2.2vmin;
+  animation: font-rise .3s .5s forwards;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.skills .cards .card .fill {
+  width: 0%;
+  transition: all .5s;
+  font-size: 0;
+  padding: 1em;
+  color: transparent;
+  text-align: center;
+}
+
+.skills .fill .cards .card.active .fill p {
+  animation: riseFontRed .5s .4s forwards;
+  width: 98%;
+}
+
+.skills .fill .cards .card.active:nth-child(6) .fill p,
+.skills .fill .cards .card.active:nth-child(7) .fill p {
+  animation: riseFontYellow .5s .4s forwards;
+}
+
+.skills .fill .cards .card.active:nth-child(8) .fill p,
+.skills .fill .cards .card.active:nth-child(9) .fill p,
+.skills .fill .cards .card.active:nth-child(10) .fill p {
+  animation: riseFontGreen .5s .4s forwards;
+}
+
+.skills span {
+  font-size: 3.5vmin;
+  color: #505050;
+}
+
+footer {
+  background-image: url("img/footer.png");
+  color: white;
+  padding-top: 7%;
+  height: 100vmin;
+  box-sizing: border-box;
+  width: 100vw;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+footer .container span {
+  font-size: 2.4vmin;
+  color: #8e8d8d;
+}
+
+footer .container .header button {
+  background-color: transparent;
+  border: none;
+  font-size: 11vmin;
+  font-weight: bolder;
+  transition: all 0.3s;
+  margin-bottom: -1em;
+  cursor: text;
+  color: white;
+}
+
+footer .container {
+  width: 75%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2.3vmin;
+  letter-spacing: 0.05em;
+}
+
+footer .container .mid {
+  margin-top: -5em;
+  display: flex;
+  height: 12em;
+}
+
+footer .container .contact {
+  margin-top: -4vmin;
+}
+
+footer .container .mid .right a img {
+  transform: rotate(90deg);
+  margin-bottom: -0.6vmin;
+  width: 3.6vmin;
+  margin-left: -0.3vmin;
+}
+
+footer .container .mid .right a:hover img {
+  transform: rotate(-47deg);
+  margin-left: 0;
+}
+
+footer span.love {
+  color: #c9165a;
+}
+
+footer .container .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer .container .left .contact a {
+  margin-top: 2vmin;
+  font-weight: bolder;
+  font-size: 2.6vmin;
+}
+
+footer .container .mid .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 7vmin;
+}
+
+footer .container .mid .right .info {
+  font-size: 1.8vmin;
+}
+
+footer .container .mid .right span {
+  font-size: 1.8vmin;
+}
+
+footer .container .mid .start {
+  font-size: 3vmin;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-underline-offset: 0.5vmin;
+}
+
+footer .container .mid .images {
+  display: flex;
+}
+
+footer .container .mid .images a {
+  margin-right: 1em;
+}
+
+footer .container .mid > div {
+  flex: 1;
+}
+
+footer .container .header button.other {
+  color: #c9165a;
+}
+
+footer .container .header button.space {
+  width: 2.5vmin;
+}
+
+footer .container .header button:hover {
+  animation: 0.8s bounceText;
+}
+
+footer span {
+  font-family: inherit;
+  font-size: 3vmin;
+}
+
+footer span.red {
+  color: #c9165a;
+}
+
+footer .copyright p,
+footer .copyright span {
+  font-size: 1.8vmin;
+  margin-top: -10vmin;
+}
+
+footer a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+footer img {
+  width: calc(1vw + 0.7em);
+  margin-right: 1em;
+  transition: all 0.3s;
+}
+
+@keyframes font-rise {
+  from{
+    color: transparent;
+  }
+  to {
+    color: inherit;
+  }
+}
+
+@keyframes move-rtl {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0em);
+  }
+
+  33% {
+    transform: translateX(-0.8em);
+  }
+
+  66% {
+    transform: translateX(0.8em);
+  }
+
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+@keyframes bounceText {
+  25% {
+    transform: scale(0.8, 1.3);
+  }
+  50% {
+    transform: scale(1.1, 0.8);
+  }
+  75% {
+    transform: scale(0.7, 1.2);
+  }
+}
+
+@keyframes text {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes cover {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes toRight {
+  from {
+    transform: translateX(-20vw) scale(0);
+  }
+
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes toUp {
+  from {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes borderOrange {
+  from {
+    border-top: 2px solid #ec9a01;
+  }
+  to {
+    box-shadow: 1px 0 9px #ad7100;
+    border-top: 2px solid #ec9a01;
+  }
+}
+
+@keyframes borderRed {
+  from {
+    border-top: 2px solid #c9165a;
+  }
+  to {
+    border-top: 2px solid #c9165a;
+    box-shadow: 1px 0 9px #940034;
+  }
+}
+
+@keyframes riseFontRed {
+  from {  
+    color: transparent;
+  } to {
+    color: #c7014d;
+  }
+}
+
+@keyframes riseFontYellow {
+  from {  
+    color: transparent;
+  } to {
+    color: #ec9a01;
+  }
+}
+
+@keyframes riseFontGreen {
+  from {  
+    color: transparent;
+  } to {
+    color: #125B50;
+  }
+}
+
+@keyframes riseImg {
+  from {
+    width: 0;
+  }
+  to {
+  width: 15vmin;
+  }
+}
+
+@keyframes borderRight {
+  to {
+    border-right: none;
+  }
+}

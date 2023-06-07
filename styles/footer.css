@@ -1,0 +1,93 @@
+@media (max-width: 1000px) {
+  footer {
+    background-size: cover;
+    background-attachment: inherit;
+  }
+  
+  footer .container {
+    width: 80%;
+  }
+}
+
+@media (max-width:800px){
+  footer .container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
+  footer {
+    height: auto;
+    background-image: url("../img/smallFooter.png");
+    padding-top: 4em;
+    padding-bottom: 3em;
+  }
+
+  footer .header{
+    margin-bottom: 3em;
+  }
+
+  footer .container {
+    justify-content: space-around;
+  }
+
+  footer .container .mid {
+    flex-direction: column;
+  }
+
+  footer .container .mid .left {
+    margin-top: 8em;
+  }
+
+  footer .container .mid .left span {
+    font-size: 3vmin;
+  }
+
+  footer .container .mid .left span:first-child {
+    margin-bottom: 3em;
+  }
+
+  footer .container .mid .left .contact {
+    margin-top: -1em;
+  }
+
+  footer .container .mid .left .contact a {
+    margin-bottom: .5em;
+  }
+
+  footer .container .mid .left .images {
+    margin-top: 2em;
+  }
+
+  footer .container .mid .left .images img {
+    width: calc(1vw + 1.3em);
+  }
+
+  footer .container .mid .left a{
+    font-size: 3vmin;
+  }
+
+  footer .container .mid .right .start {
+    font-size: 4.5vmin;
+    text-underline-offset: 0.5vmin;
+    margin-bottom: 2.3em;
+    margin-top: 1.3em;
+  }
+
+  footer .container .mid .right span {
+    font-size: 2.4vmin;
+  }
+
+  footer .container .mid .right a:last-child{
+    margin: 0.5em 0;
+  }
+
+  footer .copyright p,
+  footer .copyright span {
+    font-size: 2.4vmin;
+  }
+
+  footer .copyright {
+    margin-top: 35em;
+  }
+}

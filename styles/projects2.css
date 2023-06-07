@@ -1,0 +1,150 @@
+body {
+    overflow: hidden;
+}
+
+nav .right span {
+    background-color: #f41f68;
+}
+
+.projects-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "one two three four"
+    "five six seven eight";
+    background-color: black;
+}
+
+.projects-container .project.one {
+    grid-area: one;
+}
+
+.projects-container .project.two {
+    grid-area: two;
+}
+
+.projects-container .project.three {
+    grid-area: three;
+}
+
+.projects-container .project.four {
+    grid-area: four;
+}
+
+.projects-container .project.five {
+    grid-area: five;
+}
+
+.projects-container .project.six {
+    grid-area: six;
+}
+
+.projects-container .project.seven {
+    grid-area: seven;
+}
+
+.projects-container .project {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: .1em;
+    transform: scale(0);
+    animation: rise 1.5s forwards;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.projects-container .project img {
+    height: 100%;
+    width: 100%;
+    transition: all .3s;
+}
+
+.projects-container .project:hover img {
+    transform: scale(1.3);
+}
+
+.projects-container .project .project-cover {
+    position: absolute;
+    background-color: rgb(0, 0, 0, .4);
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-container .project:hover .project-cover{
+    background-color: transparent;
+}
+
+.projects-container .project .project-cover .see {
+    margin: auto;
+    border-radius: 50%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    background-color: #f41f68;
+    text-transform: capitalize;
+    width: fit-content;
+    aspect-ratio: 1;
+    transform: scale(0) rotate(-180deg);
+    display: flex;
+    transition: all 0.3s;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    font-family: "Caveat", cursive;
+    z-index: 2;
+    letter-spacing: 0.1em;
+    flex-wrap: wrap;
+    font-size: 2.2vmin;
+    text-align: center;
+    animation: 0s none forwards;
+}
+
+.projects-container .project:hover .see {
+    transform: scale(1) rotate(0);
+    display: flex;
+}
+
+@media (max-width : 1000px){
+    .projects-container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto ;
+        grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight none";
+    }
+}
+
+@media (max-width : 700px){
+    body {
+        overflow:scroll;
+    }
+
+    .projects-container{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto ;
+        grid-template-areas: 
+        "one two"
+        "three four"
+        "five six"
+        "seven eight";
+        background-color: #1d1d1d;
+    }
+}

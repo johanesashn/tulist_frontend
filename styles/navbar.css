@@ -1,0 +1,269 @@
+/*
+    https://jacekjeznach.com/
+    dark theme
+    black =   
+    red = #fd2155
+    green = #08fdd8
+    grey = #8d8d8d
+    orange = #ffa500
+
+    https://as-crew.com/
+    light theme
+    white = #fff
+    pink = #f41f68
+    dark pink = #c9165a
+    pink in dark =  
+    black = #0d0d0d
+    grey = #505050
+*/
+
+nav {
+  padding: 0.3em 3em;
+  font-family: "Roboto", sans-serif;
+  position: fixed;
+  display: flex;
+  right: 0;
+  left: 0;
+  justify-content: space-between;
+  z-index: 3;
+  transition: all 0.3s;
+}
+
+nav h2 {
+  font-size: 4em;
+  text-shadow: 0.1em 0em #f41f68;
+  transform: rotate(5deg);
+  transition: 0.5s;
+  cursor: pointer;
+  color: #1d1d1d;
+}
+
+nav h2:hover {
+  animation: 0.5s bounceText;
+}
+
+nav h2.slide {
+  color: #c9165a;
+  text-shadow: 5px 5px #c9165a;
+}
+
+nav .right {
+  margin: auto 0;
+  height: 6vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav .content {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #0d0d0d;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: all 0.8s;
+}
+
+.content.slide {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content {
+  padding: 6em;
+  padding-top: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.content h1 {
+  font-size: calc(1.3vw + 2.8em);
+  color: white;
+  line-height: 1.5em;
+  transition: all 0.5s;
+  width: max-content;
+  cursor: pointer;
+}
+
+.content .social {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+  opacity: 1;
+  flex-wrap: wrap;
+}
+
+nav .content .social a {
+  font-size: calc(0.8em + 1vmin);
+  color: aqua;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: all 0.3s;
+  line-height: 2.2em;
+}
+
+nav .content .social a:hover {
+  transform: scale(1.05);
+  text-decoration: overline;
+}
+
+nav .content .header a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: all 0.3s;
+}
+
+nav .content .header a:hover {
+  text-decoration: underline;
+  color: #f41f68;
+}
+
+.content img {
+  width: calc(1vw + 1em);
+  margin-right: 1em;
+  transition: all 0.3s;
+}
+
+.content img:hover {
+  transform: scale(1.2);
+}
+
+nav .content .social a,
+nav .content .images a img {
+  transform: scale(0);
+}
+
+nav .content .header h1 {
+  transform: translateY(-100vh);
+}
+
+nav .content .header h1.slide {
+  animation: 1s 0.5s forwards toUp;
+}
+
+nav .content .social a.slide,
+nav .content .images a img.slide {
+  animation: toUp 1s 0.3s forwards;
+}
+
+nav .right span {
+  display: inline-block;
+  height: 1vmin;
+  width: 5vmin;
+  /* background-color: #0d0d0d; */
+  background-color: #f41f68;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .right {
+  cursor: pointer;
+}
+
+nav .right span:first-child {
+  width: 7vmin;
+}
+
+nav .right span:last-child {
+  width: 3vmin;
+}
+
+nav .right:hover span {
+  width: 7vmin;
+  /* background-color: #f41f68; */
+}
+
+nav .right:hover span:first-child {
+  width: 3vmin;
+}
+
+nav .right:hover span:last-child {
+  width: 5vmin;
+}
+
+nav .right span.slide {
+  background-color: #f41f68;
+}
+
+/* tag */
+img.tag {
+  position: fixed;
+  right: -15.9vmin;
+  top: 20vmin;
+  z-index: 2;
+  height: 32vmin;
+  transition: all 0.3s;
+  animation: 1s 0.5s ease-in-out rise;
+}
+
+img.tag:hover {
+  transform: scale(1.1);
+}
+
+@keyframes bounceText {
+  25% {
+    transform: scale(0.8, 1.3);
+  }
+  50% {
+    transform: scale(1.1, 0.8);
+  }
+  75% {
+    transform: scale(0.7, 1.2);
+  }
+}
+
+@media (max-width: 1100px) {
+  nav {
+    padding-top: 1em;
+  }
+
+  nav .content .social {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 850px) {
+  nav {
+    padding: 0.3em 2em;
+  }
+  nav h2 {
+    font-size: 8vmin;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0.3em 1.5em;
+  }
+
+  nav .content {
+    padding-left: 3em;
+  }
+
+  nav {
+    padding-top: 4vmin;
+  }
+
+  nav .content h1 {
+    font-size: calc(1.3vw + 2em);
+  }
+
+  img.tag {
+    top: 15vmax;
+    height: 35vmin;
+    right: -17.5vmin;
+    animation: 0.8s 0.5s ease-in-out rise;
+  }
+
+  nav h2.slide {
+    text-shadow: 2px 2px #c9165a;
+  }
+}

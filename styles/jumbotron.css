@@ -1,0 +1,90 @@
+@media (max-width: 1200px) {
+  .jumbotron {
+    padding-top: 0;
+    padding-left: 3em;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .jumbotron button {
+    font-size: 12.3vmin;
+  }
+
+  .jumbotron .desc {
+    margin-top: 0;
+    flex-direction: column;
+    font-size: 2.5vmin;
+  }
+
+  .jumbotron .desc button {
+    margin-top: 3em;
+    font-size: 2vmin;
+    width: max-content;
+    margin-left: 1em;
+  }
+
+  .jumbotron .scroll:first-child {
+    left: -2em;
+  }
+
+  .jumbotron .scroll:last-child {
+    right: -2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .cover img{
+    width: 25vmin;
+  }
+
+  .jumbotron {
+    height: 95vmax;
+    padding-left: 2em;
+    background-image: url("../img/smallJumbo.png");
+  }
+
+  .jumbotron button {
+    font-size: 12.5vmin;
+    margin-left: -0.1em;
+  }
+
+  .jumbotron .header,
+  .jumbotron .desc {
+    margin-left: -0.5em;
+  }
+
+  .jumbotron .desc {
+    margin-left: -0.7em;
+  }
+
+  .jumbotron button.contact {
+    width: 50%;
+    height: 3.8em;
+    font-size: 3vmin;
+  }
+
+  .jumbotron .scroll p {
+    font-size: 3vmin;
+  }
+
+  .jumbotron .scroll:first-child {
+    left: -1em;
+  }
+
+  .jumbotron .scroll:last-child {
+    right: -1em;
+  }
+
+  .jumbotron h3 {
+    font-size: 3.5vmin;
+  }
+}
+
+@media (max-width: 380px) {
+  .jumbotron button {
+    font-size: 12vmin;
+  }
+}

@@ -1,18 +1,662 @@
+<!-- if you want to add scroll trigger just add class in every section of portfolio website with class "section" -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tulist</title>
 
-    <link rel="website icon" type="png" href="public/assets/logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <!-- web icon -->
+    <link rel="website icon" type="png" href="img/logo.png">
+    
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="styles/jumbotron.css">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/achievements.css">
+    <link rel="stylesheet" href="styles/skills.css">
+    <title>Johanes Alberto Siahaan</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <!-- repsonsive in jumbotron.css -->
+    <!-- <div class="cover">
+      <img src="img/wheel.png" alt="">
+      <p style="color:white">Loading</p>
+    </div> -->
+
+    <nav class="main">
+      <div class="left">
+        <h2>Jo</h2>
+      </div>
+      <div class="content">
+        <div class="header">
+          <h1><a href="">Home</a></h1>
+          <h1><a href="pages/projects2.html">Projects</a></h1>
+          <h1><a href="pages/achievements.html">Achievements</a></h1>
+          <h1><a href="pages/skills.html">Skills</a></h1>
+        </div>
+        <div class="social">
+          <a href="mailto:johanesashn@gmail.com" target="_blank">johanesashn@gmail.com</a>
+          <a href="https://www.instagram.com/johanesalberto/" target="_blank">@johanesalberto</a>
+          <a href="https://www.linkedin.com/in/johanes-alberto/" target="_blank">johanes-alberto</a>
+        </div>
+        <div class="images">
+          <a href="mailto:johanesashn@gmail.com" target="_blank"><img onmouseover="setNewImage()" onmouseout="setOldImage()" src="img/gmail.png" alt="" /></a>
+          <a href="https://www.instagram.com/johanesalberto/" target="_blank"><img onmouseover="setNewImage2()" onmouseout="setOldImage2()" src="img/instagram.png" alt="" /></a>
+          <a href="https://www.linkedin.com/in/johanes-alberto/" target="_blank"><img onmouseover="setNewImage3()" onmouseout="setOldImage3()" src="img/linkedin.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="right">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- <a href="other/achievements.html">
+      <img class="tag" src="img/achievements.png" alt="">
+    </a> -->
+
+    <div class="jumbotron">
+      <div class="scroll">
+        <p>scroll down</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+          <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+        </svg>
+      </div>
+      <section class="header">
+        <span><</span><span>body></span>
+        <br>
+        <span><</span><span>h1></span>
+        <div class="upside">
+          <button id="jump" class="pink" data-aos="zoom-in" data-aos-duration="500">H</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">i</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">,</button>
+        </div>
+
+        <div class="midside">
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">I</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">'</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">m</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600" class="space"></button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700" class="J">J</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800">o</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900">h</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">a</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1100">n</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1200">e</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1300">s</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1400">,</button>
+        </div>
+
+        <div class="downside">
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1500">W</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1600">e</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1700">b</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1800" class="space"></button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1900">D</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2000">e</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2100">v</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2200">e</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2300">l</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2400">o</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2500">p</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2600">e</button>
+          <button data-aos="zoom-in" data-aos-duration="500" data-aos-delay="2700">r</button>
+          <span><</span><span>/h1></span>
+        </div>
+      </section>
+
+      <section class="desc">
+        <div class="left">
+          <span><</span><span>p></span>
+        <h3>Front End Developer / WordPress Developer</h6>
+        <span><</span><span>/p></span>
+        </div>
+
+        <a href="mailto:johanesashn@gmail.com" target="_blank">
+          <button class="contact">
+            <span></span>
+            <p>Contact me!</p>
+          </button>
+        </a>
+      </section>
+
+      <div class="scroll">
+        <p>scroll down</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+          <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <div class="container">
+        <span><</span>
+        <span>h2></span>
+        <div>
+          <button>M</button><button>y</button></div>
+        <div class="white">
+          <button>P</button><button>o</button><button>r</button><button>t</button><button>o</button><button>f</button><button>o</button><button>l</button><button>i</button><button>o</button>
+        </div>
+        <span><</span><span>/h2></span>
+        <br>
+        <span><</span><span>p></span>
+        <div class="fill" data-aos="fade-up" data-aos-duration="500">
+          <p>This is a small gallery of mine. I'm Johanes Alberto Siahaan often called as Johanes or Berto. Currently, I am studying at University of North Sumatra, Indonesia, majoring Computer Science. My hobby is making some cool websites. Want to see my projects? Just <a href="">scroll</a> down! </p>
+        </div>
+        <span><</span><span>/p></span>
+        <a href=""><p class="start">START A PROJECT <img src="img/rigthArrow.png" alt=""></p></a>
+      </div>
+    </div>
+
+    <div class="display">
+      <div class="more" id="more1">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more5"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigPintara.png" alt="">
+          <a href="#more2"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="https://bertosamples.github.io/" class="view-website" target="_blank">view website</a>
+      </div>
+      <div class="more" id="more2">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more1"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigJoquiz.png" alt="">
+          <a href="#more3"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="https://joquiz.netlify.app/" class="view-website" target="_blank">view website</a>
+      </div>
+      <div class="more" id="more3">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more2"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <!-- <img src="img/bigBritishSchool.jpg" alt=""> -->
+          <img src="img/bigTulist.png" alt="">
+          <a href="#more4"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="https://tulist.vercel.app/" target="_blank" class="view-website">view website</a>
+      </div>
+      <div class="more" id="more4">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more3"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigHdsign.png" alt="">
+          <a href="#more5"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="" class="view-website">link doesn't exist</a>
+      </div>
+      <div class="more" id="more5">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more4"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigPortfolio.png" alt="">
+          <a href="#more6"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="https://johanesashn.github.io/old-portofolio/" target="_blank" class="view-website">visit website</a>
+      </div>
+      <div class="more" id="more6">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more5"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigFootie.jpg" alt="">
+          <a href="#more7"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="" class="view-website">link doesn't exist</a>
+      </div>
+      <div class="more" id="more7">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more6"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigTenzies.png" alt="">
+          <a href="#more8"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="https://jotenzies.netlify.app/" target="_blank" class="view-website">view website</a>
+      </div>
+      <div class="more" id="more8">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more7"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigAsix.png" alt="">
+          <a href="#more9"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="" class="view-website">link doesn't exist</a>
+      </div>
+      <div class="more" id="more9">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more8"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigAirbnb.png" alt="">
+          <a href="#more10"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="" class="view-website">link doesn't exist</a>
+      </div>
+      <div class="more" id="more10">
+        <a href="#projects"><img src="img/close.png" alt="">close</a>
+        <div class="fill">
+          <a href="#more8"><img class="arrow" src="img/arrowLeft.png" alt=""></a>
+          <img src="img/bigRPS.png" alt="">
+          <a href="#more1"><img class="arrow" src="img/arrowRight.png" alt=""></a>
+        </div>
+        <a href="https://johanesashn.github.io/Rock-Paper-Scissors/" target="_blank" class="view-website">view website</a>
+      </div>
+    </div>
+    <!-- kalau mau tambahkan morenya, ubah di css juga biar bisa di klik, yang target dan more biasa -->
+    
+    <div class="projects" id="projects">
+      <div class="upper"><span><</span><span>section></span></div>
+      <p><span><</span><span>p></span> Latest Projects <span><</span><span>/p></span></p>
+      <div class="container">
+        <a href="#more1">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div> 
+          </div>
+          <img src="img/pintara.png" alt="">
+        </a>
+        <a href="#more2">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/joquiz.png" alt="">
+        </a>
+        <a href="#more3">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <!-- <img src="img/britishSchool.png" alt=""> -->
+          <img src="img/tulist.png" alt="">
+        </a>
+        <a href="#more4">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/Hdsign.png" alt="">
+        </a>
+        <a href="#more5">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/Portofolio.png" alt="">
+        </a>
+        <a href="#more6">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/footie.png" alt="">
+        </a>
+        <a href="#more7">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/tenzies.png" alt="">
+        </a>
+        <a href="#more8">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/asix.png" alt="">
+        </a>
+        <a href="#more9">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/airbnb.png" alt="">
+        </a>
+        <a href="#more10">
+          <div class="coverImg">
+            <div class="see">VIEW PROJECT</div>
+          </div>
+          <img src="img/RPS.png" alt="">
+        </a>
+      </div>
+    </div>
+    <!-- <div class="bottom"><span><</span><span>/section></span></div> -->
+    
+    <div class="achievements">
+      <div class="fill">
+        <div class="scroll">
+          <p>scroll down</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+            <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+          </svg>
+        </div>
+        <div class="header">
+          <span><</span>
+          <span>h2></span>
+          <div class="upside">
+            <button>M</button><button>y</button>
+          </div>
+          <div class="downside">
+            <button>A</button><button>c</button><button>h</button><button>i</button><button>e</button><button>v</button><button>e</button><button>m</button><button>e</button><button>n</button><button>t</button><button>s</button>
+          </div>
+          <span><</span>
+          <span>/h2></span>
+        </div>
+        <div class="container">
+          <span><</span>
+          <span>section></span>
+          <div class="cards">
+            <div class="card">
+              <h4>COMPETITIVE PROGRAMMING</h4>
+              <h2>Honorable Mentioned of Imilkom Competitive Programming Competition.</h2>
+              <p>Won the 3rd position (honorable mentioned) in IMILKOM Competitive Programming Competition held by IMILKOM using C++ language and participated by students from various universities in Indonesia.</p>
+            </div>
+            <div class="card">
+              <h4>COMPETITIVE PROGRAMMING</h4>
+              <h2>3rd Winner of Mini-Tech Competitive Programming Competition.</h2>
+              <p>Won the 3rd position in Competitive Programming Competition on MINI-TECH Competition held by PEMA Fasilkom-TI using C++ language and participated by students of University of North Sumatera.</p>
+            </div>
+            <div class="card">
+              <h4>PHYSICS OLYMPIAD</h4>
+              <h2>Silver Medalist Physics Olympiad Throughout North Sumatera and Aceh.</h2>
+              <p>Won the 6th place (silver medalist) on physics olymipad throughout North Sumatera and Aceh held by Lospi.</p>
+            </div>
+          </div>
+          <span><</span>
+          <span>/section></span>
+        </div>
+        <div class="scroll">
+          <p>scroll down</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+            <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="walkingText">
+      <h2>CODING IS MY HOBBY</h2>
+      <h2>CODING IS MY HOBBY</h2>
+      <h2>CODING IS MY HOBBY</h2>
+      <h2>CODING IS MY HOBBY</h2>
+    </div>
+
+    <div class="skills">
+      <div class="fill">
+        <div class="header">
+          <span><</span>
+          <span>h2></span>
+          <div class="upside">
+            <button>M</button><button>y</button>
+          </div>
+          <div class="downside">
+            <button>S</button><button>k</button><button>i</button><button>l</button><button>l</button><button>s</button>
+          </div>
+          <span><</span>
+          <span>/h2></span>
+        </div>
+        <div class="upper"><span><</span><span>section></span></div>
+        <div class="cards">
+            <div class="card active">
+              <div class="header">
+                <h2>s</h2>
+                <h2 style="margin-bottom: .3em">J</h2>
+                <h2>t</h2>
+                <h2>c</h2>
+                <h2>a</h2>
+                <h2>e</h2>
+                <h2>R</h2>
+                <h2 class="small" style="width:fit-content">REACT JS</h2>
+              </div>
+              <div class="fill">
+                <p>Understand React Js from components, props, state, side effect, navigate, and many more.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2 style="margin-bottom: .3em">L</h2>
+                <h2>M</h2>
+                <h2>T</h2>
+                <h2>H</h2>
+                <h2 class="small">HTML</h2>
+              </div>
+              <div class="fill">
+                <p>Understand and master at HTML from basic to the complicated one, starts from the elements, semantic, attribute, class, id, and many more.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2>S</h2>
+                <h2>S</h2>
+                <h2>C</h2>
+                <h2 class="small">CSS</h2>
+              </div>
+              <div class="fill">
+                <p>Understand and master at CSS from basic to the complicated one, starts from the ordinary styling, flex, grid, responsive, and many more.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2>S</h2>
+                <h2>S</h2>
+                <h2>A</h2>
+                <h2>S</h2>
+                <h2 class="small">SASS</h2>
+              </div>
+              <div class="fill">
+                <p>Understand SASS starts from the basic into the intermediate one, can do variable, and styling like can do in CSS</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2>p</h2>
+                <h2>a</h2>
+                <h2>r</h2>
+                <h2>s</h2>
+                <h2>t</h2>
+                <h2>o</h2>
+                <h2>o</h2>
+                <h2>B</h2>
+                <h2 class="small">Bootsrap</h2>
+              </div>
+              <div class="fill">
+                <p>Can do bootsrap and utilise the elements that bootsrap serve, that can make it more efficient than make manual from CSS and HTML</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2>t</h2>
+                <h2>p</h2>
+                <h2>i</h2>
+                <h2>r</h2>
+                <h2>c</h2>
+                <h2>s</h2>
+                <h2>a</h2>
+                <h2>v</h2>
+                <h2>a</h2>
+                <h2>J</h2>
+                <h2 class="small">Javascript</h2>
+              </div>
+              <div class="fill">
+                <p>Understand Javascript from loop, function, Document Object Model, and many more that can make website more attractive.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2>P</h2>
+                <h2>H</h2>
+                <h2>P</h2>
+                <h2 class="small">PHP</h2>
+              </div>
+              <div class="fill">
+                <p>Understand PHP starts from the basic to the intermediate one. Can do function, loop, operator, connect to website, and CRUD.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2 style="margin-bottom: .3em">L</h2>
+                <h2>Q</h2>
+                <h2>S</h2>
+                <h2 class="small">SQL</h2>
+              </div>
+              <div class="fill">
+                <p>Understand SQL starts from the basic one into the intermediate one. Know many syntax that used to make database (DDL and DML), function, and many more.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2>n</h2>
+                <h2>o</h2>
+                <h2>h</h2>
+                <h2>t</h2>
+                <h2>y</h2>
+                <h2>P</h2>
+                <h2 class="small">Python</h2>
+              </div>
+              <div class="fill">
+                <p>Understand Python starts from the loop, list, function, Object Oriented Programming, can use many python library, and many more that I can do.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="header">
+                <h2>+</h2>
+                <h2>+</h2>
+                <h2>C</h2>
+                <h2>/</h2>
+                <h2>C</h2>
+                <h2 class="small">C/C++</h2>
+              </div>
+              <div class="fill">
+                <p>Understand C/C++ starts from loop, array, function, pointer, struct, Object Oriented Programming, and many more.</p>
+              </div>
+            </div>
+        </div>
+        <div class="bottom"><span><</span><span>/section></span></div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="container">
+        <div class="header">
+          <button class="other">H</button><button class="other">a</button><button class="other">v</button><button class="other">e</button><button class="space"> </button><button>a</button><button class="space"> </button><button>t</button><button>a</button><button>l</button><button>k</button>
+        </div>
+        <div class="mid" data-aos="fade-up" data-aos-duration="500">
+          <div class="left">
+            <span>Contact me at :</span>
+            <div class="contact">
+              <a href="mailto:johanesashn@gmail.com" target="_blank">johanesashn@gmail.com</a>
+              <a href="https://www.linkedin.com/in/johanes-alberto/" target="_blank">johanes-alberto</a>
+            </div>
+            <div class="images">
+              <a href="mailto:johanesashn@gmail.com" target="_blank"><img onmouseover="setNewImage()" onmouseout="setOldImage()" src="img/gmail.png" alt="" /></a>
+              <a href="https://www.instagram.com/johanesalberto/" target="_blank"><img onmouseover="setNewImage2()" onmouseout="setOldImage2()" src="img/instagram.png" alt="" /></a>
+              <a href="https://www.linkedin.com/in/johanes-alberto/" target="_blank"><img onmouseover="setNewImage3()" onmouseout="setOldImage3()" src="img/linkedin.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="right">
+            <a href=""><p class="start">START A PROJECT <img src="img/rigthArrow.png" alt=""></p></a>
+            <div class="info">
+              <span>The information presented at this website belongs to me and cannot be used by other resources without our permission and without the link to the source.</span>
+            </div>
+            <a href="https://jacekjeznach.com/" target="_blank"><p><span>inspired by <span class="red">https://jacekjeznach.com/</span></a></span></p></a>
+          </div>
+        </div>
+          
+        <div class="copyright">
+          <p><span>&#169; 2022 Johanes Alberto Siahaan,</span> create with <span class="love">&#10084;</span> by me</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function setNewImage() {
+        document.querySelectorAll("nav img")[0].src = "img/redgmail.png";
+        document.querySelectorAll("footer img")[0].src = "img/redgmail.png";
+      }
+      function setOldImage() {
+        document.querySelectorAll("nav img")[0].src = "img/gmail.png";
+        document.querySelectorAll("footer img")[0].src = "img/gmail.png";
+      }
+
+      function setNewImage2() {
+        document.querySelectorAll("nav img")[1].src = "img/redInstagram.png";
+        document.querySelectorAll("footer img")[1].src = "img/redInstagram.png";
+      }
+      function setOldImage2() {
+        document.querySelectorAll("nav img")[1].src = "img/instagram.png";
+        document.querySelectorAll("footer img")[1].src = "img/instagram.png";
+      }
+
+      function setNewImage3() {
+        document.querySelectorAll("nav img")[2].src = "img/redlinkedin.png";
+        document.querySelectorAll("footer img")[2].src = "img/redlinkedin.png";
+      }
+      function setOldImage3() {
+        document.querySelectorAll("nav img")[2].src = "img/linkedin.png";
+        document.querySelectorAll("footer img")[2].src = "img/linkedin.png";
+      }
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        const projectCard = document.querySelectorAll('.projects .container a');
+        projectCard.forEach((card, i) => {
+          card.dataset.aos = "flip-up";
+          card.dataset.aosDelay = i*200;
+          card.dataset.aosDuration = 800;
+        })
+
+        const projectButton = document.querySelectorAll('.about .container button');
+        projectButton.forEach((button, i) => {
+          button.dataset.aos = "flip-right";
+          button.dataset.aosDelay = i*100;
+          button.dataset.aosDuration = 500;
+        })
+        
+        const footerButton = document.querySelectorAll('footer button');
+        footerButton.forEach((card, i) => {
+          card.dataset.aos = "flip-right";
+          card.dataset.aosDelay = i*100;
+          card.dataset.aosDuration = 500;
+        })
+
+        const achievementsButton = document.querySelectorAll('.achievements button');
+        achievementsButton.forEach((button, i) => {
+          button.dataset.aos = "flip-right";
+          button.dataset.aosDelay = i*100;
+          button.dataset.aosDuration = 500;
+        })  
+        
+        const achievementsCards = document.querySelectorAll(".achievements .cards .card")
+        achievementsCards.forEach((card, i) => {
+          card.dataset.aos = "zoom-in";
+          card.dataset.aosDelay = i*300;
+          card.dataset.aosDuration = 500;          
+        })
+
+        const skillsButton = document.querySelectorAll('.skills button');
+        skillsButton.forEach((button, i) => {
+          button.dataset.aos = "flip-right";
+          button.dataset.aosDelay = i*100;
+          button.dataset.aosDuration = 500;
+        })  
+        
+        skillCards.forEach((card, i) => {
+          card.dataset.aos = "fade-left";
+          card.dataset.aosDelay = i*200;
+          card.dataset.aosDuration = 500;           
+        })
+
+        AOS.init({
+          once : true
+        });
+    </script>
+
   </body>
 </html>

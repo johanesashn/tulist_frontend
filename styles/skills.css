@@ -1,0 +1,117 @@
+@media (max-width: 1000px) {
+  .skills .fill .cards {
+    flex-direction: column;
+    border: none;
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  .skills .fill .cards .card .header {
+    /* border: none; */
+    flex-direction: row;
+  }
+
+  .skills .fill .cards .card h2 {
+    display: none;
+  }
+
+  .skills .fill .cards .card h2.small {
+    display: block;
+    transform: rotate(0);
+    width: 4em;
+    font-size: 4vmin;
+  }
+
+  .skills .fill .cards .card {
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: .5em;
+  }
+
+  .skills .fill .cards .card.active .fill {
+    transform: scaleX() scaleY(0);
+    width: 100%;
+  }
+
+  .skills .fill .cards .card.active .fill p {
+    width: 99%;
+    margin: auto;
+  }
+
+  .skills .fill .cards .card.active:nth-child(1) .fill,
+  .skills .fill .cards .card.active:nth-child(2) .fill,
+  .skills .fill .cards .card.active:nth-child(3) .fill,
+  .skills .fill .cards .card.active:nth-child(4) .fill {
+    border: 2px solid #c7014d;
+    border-top: none;
+  }
+
+  .skills .fill .cards .card.active:nth-child(5) .fill,
+  .skills .fill .cards .card.active:nth-child(6) .fill {
+    border: 2px solid #ec9a01;
+    border-top: none;
+  }
+
+  .skills .fill .cards .card.active:nth-child(7) .fill, 
+  .skills .fill .cards .card.active:nth-child(8) .fill, 
+  .skills .fill .cards .card.active:nth-child(9) .fill{
+    border: 2px solid #125B50;
+    border-top: none;
+  }
+
+  .skills .fill .cards .card.active .fill {
+    transform: scaleY(1) scaleX(1);
+    height: 100%;
+    padding: 1em 0;
+    justify-content: center;
+    border: none;
+  }
+
+  .skills .fill .cards .card {
+    margin-top: 0;
+  }
+
+  .skills .fill .cards .card .fill{
+    transform: scaleX(1);
+    width: 100%;
+    transition: all .4s ease-in-out;
+    height: 0%;
+  }
+  
+  .skills .fill .cards .card.active .fill{
+    transform: scaleX(1);
+    height: 100%;
+  }
+
+  .skills .fill .cards .card.active .fill p {
+    animation: riseFontRed .3s .4s forwards;
+    width: 98%;
+  }
+  
+  .skills .fill .cards .card.active:nth-child(5) .fill p,
+  .skills .fill .cards .card.active:nth-child(6) .fill p {
+    animation: riseFontYellow .3s .4s forwards;
+  }
+  
+  .skills .fill .cards .card.active:nth-child(7) .fill p,
+  .skills .fill .cards .card.active:nth-child(8) .fill p,
+  .skills .fill .cards .card.active:nth-child(9) .fill p {
+    animation: riseFontGreen .3s .4s forwards;
+  }
+
+  .skills .fill .cards .card .header:hover {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .skills {
+    background-image: url("../img/smallJumbo.png");
+  }
+
+  .skills .fill .cards .card.active .fill p {
+    font-size: 2.8vmin;
+  }
+
+}
