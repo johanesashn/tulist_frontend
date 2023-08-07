@@ -21,7 +21,8 @@ function Login() {
     const passwordLoginRef = useRef()
     
     const getUsers = async() => {
-        const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
+        // const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
+        const response = await axios.get("https://tulistbackend-production.up.railway.app/users")
         setUsers(response.data)
     }
 
@@ -76,7 +77,7 @@ function Login() {
                     setCheckConfirm(true)
                     setSuccess(true)
                     setRegister(true)
-                    await axios.post("https://mighty-gold-production.up.railway.app/users", {
+                    await axios.post("https://tulistbackend-production.up.railway.app/users", {
                         name: newUsername, 
                         password: hashedPassword, 
                         lists: [],

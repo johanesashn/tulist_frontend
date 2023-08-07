@@ -38,7 +38,7 @@ const UserList = () => {
     const [previewImage, setPreviewImage] = useState(null)
 
     const getUsers = async() => {
-        const response = await axios.get("https://mighty-gold-production.up.railway.app/users")
+        const response = await axios.get("https://tulistbackend-production.up.railway.app/users")
         setUsers(response.data)
     }
     
@@ -48,20 +48,20 @@ const UserList = () => {
                 setUser(user)
                 setLists([...user.lists])
                 userLists = [...user.lists]
-
-                const done = user.lists.filter((list) => list.isDone === true)
-                const starred = user.lists.filter((list) => list.isStarred === true)    
-                
-                setStarredList(starred);
-                setDoneList(done)
             }
         })
+
+        const done = lists.filter((list) => list.isDone === true)
+        const starred = lists.filter((list) => list.isStarred === true)    
+
+        setStarredList(starred);
+        setDoneList(done)
     }
 
     const deleteUser = async (id, idList) => {
         const newUserList = lists.filter(list => (list._id !== idList))
         try {
-        await axios.patch(`https://mighty-gold-production.up.railway.app/users/${id}`, {
+        await axios.patch(`https://tulistbackend-production.up.railway.app/users/${id}`, {
             name: user.name, 
             password: user.password, 
             lists: newUserList
@@ -84,7 +84,7 @@ const UserList = () => {
             }
         ]
         try {
-            await axios.patch(`https://mighty-gold-production.up.railway.app/users/${id}`, {
+            await axios.patch(`https://tulistbackend-production.up.railway.app/users/${id}`, {
                 name: user.name, 
                 password: user.password, 
                 lists: newUserLists
@@ -156,7 +156,7 @@ const UserList = () => {
         setStarred(false)
 
         try {
-            await axios.patch(`https://mighty-gold-production.up.railway.app/users/${id}`, {
+            await axios.patch(`https://tulistbackend-production.up.railway.app/users/${id}`, {
                 name: user.name, 
                 password: user.password, 
                 lists: [...newList]
@@ -180,7 +180,7 @@ const UserList = () => {
         }
 
         try {
-            await axios.patch(`https://mighty-gold-production.up.railway.app/users/${id}`, {
+            await axios.patch(`https://tulistbackend-production.up.railway.app/users/${id}`, {
                 name: user.name, 
                 password: user.password, 
                 lists: [...newList]
@@ -207,14 +207,10 @@ const UserList = () => {
     
     useEffect(() => {
         getUsers()
-        setStarredList(starredList);
-        setDoneList(doneList)
         setGreet(greeting())
         setDay(getDay())
         setMonth(getMonth())
         setDate(getDate())
-        setStarredList(starredList);
-        setDoneList(doneList)
     }, [])
 
     useEffect(() => {
@@ -225,7 +221,7 @@ const UserList = () => {
     useEffect(() => {
         setStarredList(starredList);
         setDoneList(doneList)
-    }, [doneList, starredList, users])
+    }, [doneList, starredList])
 
     useEffect(() => {
         getUser(id)
